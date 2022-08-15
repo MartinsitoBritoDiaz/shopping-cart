@@ -1,3 +1,22 @@
+## Welcome! 👋
+
+
+### Desktop view
+
+![imagen](https://user-images.githubusercontent.com/54644026/184560527-becf4b37-2ab3-4280-9629-5a9b7811d9ec.png)
+
+### Tablet view
+
+![imagen](https://user-images.githubusercontent.com/54644026/184560497-18fa8699-f0c8-4a0f-8700-9f1908c5ecf6.png)
+
+### Mobile view
+
+![imagen](https://user-images.githubusercontent.com/54644026/184560489-abf2b728-958e-46b2-a762-420441bda945.png)
+
+
+**Thanks for checking out my project** 🚀
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
