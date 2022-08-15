@@ -1,4 +1,4 @@
-## Welcome! 👋
+## Welcome To React Shopping Cart 👋
 
 
 ### Desktop view
