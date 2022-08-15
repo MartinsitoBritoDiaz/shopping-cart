@@ -16,7 +16,7 @@
 
 ### Link
 
-</a style="" href="https://martinsitobritodiaz.github.io/shopping-cart/">Live Site</a>
+<a style="text-align: center;" href="https://martinsitobritodiaz.github.io/shopping-cart/">Live Site</a>
 
 **Thanks for checking out my project** 🚀
 
