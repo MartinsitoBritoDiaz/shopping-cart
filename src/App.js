@@ -1,6 +1,7 @@
 import { Component } from 'react';
-import Products from './components/Products'
+import Products from './components/Products.js'
 import Layout from './components/Layout.js'
+import Navbar from './components/Navbar.js'
 import Title from './components/Title.js'
 
 class App extends Component {
@@ -16,16 +17,53 @@ class App extends Component {
       { name: 'Cortez', price: 55, img: './sneakers/nike-8.png'}, 
       { name: 'Blazer', price: 76.99, img: './sneakers/nike-9.png'},
       { name: 'Flyknit', price: 43.99, img: './sneakers/nike-10.png'},
-    ]
+    ],
+    cart: [],
+    isCartVisible: false,
+  }
+
+  addToCart = (product) => {
+    const { cart } = this.state
+
+    if(cart.find(_product => _product.name === product.name))
+    {
+      const newCart = cart.map(_product => _product.name === product.name
+        ? ({
+          ..._product,
+          quantity: _product.quantity + 1,
+        })
+        :
+          _product)          
+      return this.setState({ cart: newCart })
+    }
+    return this.setState({
+      cart: this.state.cart.concat({
+        ...product,
+        quantity: 1,
+      })
+    })
+  }
+
+  showCart = () => {
+    if(!this.state.cart.length){
+      return
+    }
+    this.setState( { isCartVisible: !this.state.isCartVisible })
   }
 
   render() {
+    const { isCartVisible } = this.state 
     return (
       <div>
+      <Navbar  
+        cart={this.state.cart}
+        isCartVisible={isCartVisible}
+        showCart={this.showCart}
+        />
        <Layout>
         <Title />
         <Products
-          addToCart={() => console.log('This function still do nothing')}
+          addToCart={this.addToCart}
           products={this.state.products}
         />
         </Layout>
